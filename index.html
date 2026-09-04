@@ -1,0 +1,86 @@
+<!-- رأس الصفحة -->
+<header class="dark-card shadow-md py-4 px-6 mb-6">
+    <div class="max-w-7xl mx-auto flex justify-between items-center">
+        <h1 class="text-xl font-bold text-blue-400">منصة مدرسة الطيبة الثانوية - نظام رصد الغياب</h1>
+        <span class="text-sm text-gray-400">إدارة 21 صفاً و630 طالباً</span>
+    </div>
+</header>
+
+<!-- المحتوى الرئيسي -->
+<main class="max-w-6xl mx-auto px-4 w-full flex-grow grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+    
+    <!-- بوابة المعلمين -->
+    <div class="dark-card p-6 rounded-xl shadow-lg flex flex-col justify-between">
+        <div>
+            <h2 class="text-lg font-bold text-blue-400 mb-3">1. بوابة المعلمين</h2>
+            <p class="text-sm text-gray-400 mb-4">مربو الصفوف الـ 21 لرصد وحفظ الغياب اليومي.</p>
+        </div>
+        <button onclick="openPortal('teacher')" class="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 rounded-lg font-medium transition">دخول المعلمين</button>
+    </div>
+
+    <!-- بوابة الطلبة -->
+    <div class="dark-card p-6 rounded-xl shadow-lg flex flex-col justify-between">
+        <div>
+            <h2 class="text-lg font-bold text-green-400 mb-3">2. بوابة الطلبة وأولياء الأمور</h2>
+            <p class="text-sm text-gray-400 mb-4">الاستعلام عن عدد أيام الغياب وحالة الطالب.</p>
+        </div>
+        <button onclick="openPortal('student')" class="w-full bg-green-600 hover:bg-green-700 text-white py-2 rounded-lg font-medium transition">دخول الطلبة</button>
+    </div>
+
+    <!-- لوحة تحكم المدير -->
+    <div class="dark-card p-6 rounded-xl shadow-lg flex flex-col justify-between">
+        <div>
+            <h2 class="text-lg font-bold text-purple-400 mb-3">3. لوحة تحكم المدير</h2>
+            <p class="text-sm text-gray-400 mb-4">متابعة غياب الصفوف وإرسال التنبيهات لأولياء الأمور.</p>
+        </div>
+        <button onclick="openPortal('admin')" class="w-full bg-purple-600 hover:bg-purple-700 text-white py-2 rounded-lg font-medium transition">لوحة المدير</button>
+    </div>
+
+</main>
+
+<!-- نافذة منبثقة تفاعلية مبسطة -->
+<div id="modal" class="fixed inset-0 bg-black bg-opacity-70 hidden flex items-center justify-center p-4">
+    <div class="dark-card p-6 rounded-xl max-w-md w-full relative">
+        <button onclick="closeModal()" class="absolute top-3 left-3 text-gray-400 hover:text-white font-bold">✕</button>
+        <div id="modal-content">
+            <!-- المحتوى الديناميكي يظهر هنا -->
+        </div>
+    </div>
+</div>
+
+<!-- تذييل الصفحة -->
+<footer class="dark-card py-4 text-center text-xs text-gray-500">
+    جميع الحقوق محفوظة © 2026 - مدرسة الطيبة الثانوية الشاملة للبنين
+</footer>
+
+<script>
+    function openPortal(type) {
+        const modal = document.getElementById('modal');
+        const content = document.getElementById('modal-content');
+        modal.classList.remove('hidden');
+
+        if(type === 'teacher') {
+            content.innerHTML = `
+                <h3 class="text-lg font-bold text-blue-400 mb-3">تسجيل دخول المعلمين</h3>
+                <input type="password" placeholder="أدخل الرقم السري للصف" class="w-full bg-gray-900 border border-gray-700 p-2 rounded mb-3 text-white">
+                <button onclick="alert('تم الدخول بنجاح لرصد غياب الصف')" class="w-full bg-blue-600 text-white py-2 rounded">دخول لوحة الرصد</button>
+            `;
+        } else if(type === 'student') {
+            content.innerHTML = `
+                <h3 class="text-lg font-bold text-green-400 mb-3">استعلام عن الغياب</h3>
+                <input type="text" placeholder="أدخل الرقم الوطني أو رقم الطالب" class="w-full bg-gray-900 border border-gray-700 p-2 rounded mb-3 text-white">
+                <button onclick="alert('عدد أيام الغياب الحالية: 0 أيام')" class="w-full bg-green-600 text-white py-2 rounded">استعلام</button>
+            `;
+        } else if(type === 'admin') {
+            content.innerHTML = `
+                <h3 class="text-lg font-bold text-purple-400 mb-3">لوحة تحكم المدير</h3>
+                <input type="password" placeholder="رقم سري المدير" class="w-full bg-gray-900 border border-gray-700 p-2 rounded mb-3 text-white">
+                <button onclick="alert('تم تسجيل دخول المدير بنجاح - جارٍ عرض تقارير الـ 21 صفاً')" class="w-full bg-purple-600 text-white py-2 rounded">دخول اللوحة وإرسال التنبيهات</button>
+            `;
+        }
+    }
+
+    function closeModal() {
+        document.getElementById('modal').classList.add('hidden');
+    }
+</script>
