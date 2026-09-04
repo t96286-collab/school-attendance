@@ -14,32 +14,33 @@
 <body class="bg-gradient-to-br from-slate-900 via-blue-950 to-slate-900 text-slate-100 min-h-screen flex flex-col justify-between">
 
     <!-- Header & Navigation -->
-    <header class="bg-blue-900/80 backdrop-blur-md border-b border-blue-800 shadow-2xl sticky top-0 z-50">
+    <header class="bg-blue-900/85 backdrop-blur-md border-b border-blue-800 shadow-2xl sticky top-0 z-50">
         <div class="max-w-6xl mx-auto px-4 py-4 flex flex-col md:flex-row justify-between items-center">
             <div class="flex items-center gap-3">
                 <div class="w-10 h-10 bg-blue-600 rounded-xl flex items-center justify-center font-black text-xl shadow-md">ط</div>
                 <div>
                     <h1 class="text-xl md:text-2xl font-black tracking-tight text-white">مدرسة الطيبة الثانوية الشاملة للبنين</h1>
-                    <p class="text-blue-200 text-xs font-medium">بوابة الإدارة المدرسية والأنشطة التربوية (21 صفاً • 630 طالباً)</p>
+                    <p class="text-blue-200 text-xs font-medium">البوابة الإلكترونية الشاملة (21 صفاً • 630 طالباً)</p>
                 </div>
             </div>
-            <nav class="flex gap-4 mt-4 md:mt-0 text-sm font-semibold">
+            <nav class="flex flex-wrap gap-4 mt-4 md:mt-0 text-sm font-semibold">
                 <a href="#services" class="text-blue-200 hover:text-white transition">الخدمات والنظام</a>
-                <a href="#activities" class="text-blue-200 hover:text-white transition">الأنشطة والفعاليات</a>
+                <a href="#activities" class="text-blue-200 hover:text-white transition">الأنشطة والحياة المدرسية</a>
+                <a href="#initiatives" class="text-blue-200 hover:text-white transition">المبادرات</a>
                 <a href="#plan" class="text-blue-200 hover:text-white transition">الخطة التطويرية</a>
             </nav>
         </div>
     </header>
 
-    <!-- Hero / Main Section -->
+    <!-- Main Content -->
     <main class="max-w-6xl mx-auto px-4 py-10 w-full space-y-16">
         
-        <!-- قسم بوابات النظام (رصد الغياب والخدمات) -->
+        <!-- قسم بوابات النظام ورصد الغياب -->
         <section id="services">
             <div class="text-center mb-10">
-                <span class="bg-blue-500/20 text-blue-300 text-xs font-semibold px-3 py-1 rounded-full border border-blue-400/30">الأنظمة الإلكترونية</span>
+                <span class="bg-blue-500/20 text-blue-300 text-xs font-semibold px-3 py-1 rounded-full border border-blue-400/30">الأنظمة الذكية</span>
                 <h2 class="text-3xl font-black text-white mt-2">البوابات الإلكترونية للخدمات المدرسية</h2>
-                <p class="text-slate-400 text-sm mt-1">إدارة العملية التعليمية ورصد الغياب للـ 630 طالباً بكل كفاءة وسهولة</p>
+                <p class="text-slate-400 text-sm mt-1">إدارة رصد الغياب والتواصل الفوري مع أولياء الأمور عبر الواتساب بدقة وسرعة</p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -48,7 +49,7 @@
                     <div>
                         <div class="w-14 h-14 bg-blue-600/20 text-blue-400 rounded-2xl flex items-center justify-center font-black text-2xl mb-6 border border-blue-500/30 group-hover:bg-blue-600 group-hover:text-white transition duration-300">👨‍🏫</div>
                         <h3 class="text-xl font-bold text-white mb-3">بوابة المعلمين</h3>
-                        <p class="text-slate-300 text-sm leading-relaxed mb-8">مخصصة لمربيي الصفوف الـ 21 لرصد وحفظ الغياب اليومي، وتحديث حالات الحضور والتحضير بسرعة وسهولة.</p>
+                        <p class="text-slate-300 text-sm leading-relaxed mb-8">مخصصة لمربيي الصفوف الـ 21 لرصد وحفظ الغياب اليومي، وتحديث حالات الحضور والتحضير للطلاب بسهولة.</p>
                     </div>
                     <button onclick="alert('جاري الانتقال إلى بوابة المعلمين...');" class="w-full bg-blue-600 hover:bg-blue-500 text-white font-bold py-3.5 rounded-2xl transition duration-200 shadow-lg shadow-blue-600/30">
                         دخول المعلمين
@@ -60,7 +61,7 @@
                     <div>
                         <div class="w-14 h-14 bg-emerald-600/20 text-emerald-400 rounded-2xl flex items-center justify-center font-black text-2xl mb-6 border border-emerald-500/30 group-hover:bg-emerald-600 group-hover:text-white transition duration-300">👨‍👦</div>
                         <h3 class="text-xl font-bold text-white mb-3">بوابة الطلبة والأولياء</h3>
-                        <p class="text-slate-300 text-sm leading-relaxed mb-8">للاستعلام عن عدد أيام الغياب، ومتابعة حالة الطالب السلوكية والتعليمية بكل شفافية وموثوقية عالية.</p>
+                        <p class="text-slate-300 text-sm leading-relaxed mb-8">للاستعلام عن عدد أيام الغياب، ومتابعة حالة الطالب السلوكية والتعليمية وتلقي تنبيهات الواتساب الفورية.</p>
                     </div>
                     <button onclick="alert('جاري الانتقال إلى بوابة الطلبة...');" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-3.5 rounded-2xl transition duration-200 shadow-lg shadow-emerald-600/30">
                         دخول الطلبة
@@ -72,7 +73,7 @@
                     <div>
                         <div class="w-14 h-14 bg-amber-600/20 text-amber-400 rounded-2xl flex items-center justify-center font-black text-2xl mb-6 border border-amber-500/30 group-hover:bg-amber-600 group-hover:text-white transition duration-300">⚙️</div>
                         <h3 class="text-xl font-bold text-white mb-3">لوحة تحكم المدير</h3>
-                        <p class="text-slate-300 text-sm leading-relaxed mb-8">متابعة غياب الصفوف إحصائياً، وإرسال التنبيهات الفورية التلقائية لأولياء الأمور عبر نظام الإشعارات الذكي.</p>
+                        <p class="text-slate-300 text-sm leading-relaxed mb-8">متابعة غياب الصفوف إحصائياً، وإرسال تنبيهات الواتساب التلقائية لأولياء الأمور عند غياب الطالب.</p>
                     </div>
                     <button onclick="alert('جاري الانتقال إلى لوحة تحكم المدير...');" class="w-full bg-amber-600 hover:bg-amber-500 text-white font-bold py-3.5 rounded-2xl transition duration-200 shadow-lg shadow-amber-600/30">
                         لوحة المدير
@@ -81,50 +82,77 @@
             </div>
         </section>
 
-        <!-- قسم الأنشطة والفعاليات اليومية -->
+        <!-- بوابة الأنشطة والحياة المدرسية -->
         <section id="activities" class="bg-slate-800/40 border border-slate-700/50 rounded-3xl p-8 backdrop-blur-sm">
             <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-6 border-b border-slate-700/60 pb-4">
                 <div>
-                    <span class="text-emerald-400 text-xs font-semibold">نبض المدرسة</span>
-                    <h2 class="text-2xl font-black text-white mt-1">الأنشطة والفعاليات اليومية</h2>
+                    <span class="text-cyan-400 text-xs font-semibold">نبض المدرسة</span>
+                    <h2 class="text-2xl font-black text-white mt-1">بوابة الأنشطة والحياة المدرسية</h2>
                 </div>
-                <span class="text-slate-400 text-xs mt-2 md:mt-0">تحديثات دورية لأنشطة وفعاليات الطلاب والورش المهنية</span>
+                <span class="text-slate-400 text-xs mt-2 md:mt-0">إبراز المواهب والمشاريع الطلابية المتميزة</span>
             </div>
+            
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div class="bg-slate-800/90 p-5 rounded-2xl border border-slate-700">
-                    <span class="bg-blue-500/20 text-blue-300 text-xs px-2.5 py-1 rounded-md">ورشة مهنية</span>
-                    <h4 class="text-lg font-bold text-white mt-2">تفعيل المشغل المهني واستخداماته التعليمية</h4>
-                    <p class="text-slate-300 text-xs mt-2 leading-relaxed">تدريب الطلاب على المهارات العملية وتوظيف المشاغل المهنية ضمن البرامج المعتمدة لتنمية القدرات اليدوية والتقنية.</p>
+                <!-- معرض الإبداع والابتكار -->
+                <div class="bg-slate-800/90 p-6 rounded-2xl border border-slate-700 hover:border-cyan-500/50 transition">
+                    <span class="bg-cyan-500/20 text-cyan-300 text-xs px-2.5 py-1 rounded-md font-semibold">معرض الإبداع والابتكار</span>
+                    <h4 class="text-lg font-bold text-white mt-3">مشاريع الطلاب المتميزة والابتكارات التقنية</h4>
+                    <p class="text-slate-300 text-xs mt-2 leading-relaxed">مساحة تفاعلية تسلط الضوء على إبداعات طلاب مدرسة الطيبة في المجالات العلمية، المهنية، والتقنية لدعم وتطوير مواهبهم.</p>
                 </div>
-                <div class="bg-slate-800/90 p-5 rounded-2xl border border-slate-700">
-                    <span class="bg-emerald-500/20 text-emerald-300 text-xs px-2.5 py-1 rounded-md">مبادرات مدرسية</span>
-                    <h4 class="text-lg font-bold text-white mt-2">فعاليات مبادرة "لمدرستي أنتمي" و"بيئتي الأجمل"</h4>
-                    <p class="text-slate-300 text-xs mt-2 leading-relaxed">جهود طلابية وتشاركية لتعزيز الانتماء المدرسي، العناية بالحدائق والمرافق، ونشر ثقافة البيئة الجذابة نظافةً وتنظيماً.</p>
+                <!-- المساعد الذكي ونظام الإشعارات -->
+                <div class="bg-slate-800/90 p-6 rounded-2xl border border-slate-700 hover:border-purple-500/50 transition">
+                    <span class="bg-purple-500/20 text-purple-300 text-xs px-2.5 py-1 rounded-md font-semibold">خدمات تقنية متطورة</span>
+                    <h4 class="text-lg font-bold text-white mt-3">تنبيهات الواتساب والمساعد الذكي</h4>
+                    <p class="text-slate-300 text-xs mt-2 leading-relaxed">ربط المنصة بنظام إشعارات فورية عبر رسائل الواتساب لأولياء الأمور بحالات الغياب، مع مساعد ذكي للرد على استفسارات التسجيل والمواعيد.</p>
                 </div>
             </div>
         </section>
 
-        <!-- قسم الخطة التطويرية والإجرائية -->
+        <!-- قسم المبادرات المدرسية -->
+        <section id="initiatives" class="bg-slate-800/40 border border-slate-700/50 rounded-3xl p-8 backdrop-blur-sm">
+            <div class="mb-6 border-b border-slate-700/60 pb-4">
+                <span class="text-emerald-400 text-xs font-semibold">المسؤولية المجتمعية والبيئية</span>
+                <h2 class="text-2xl font-black text-white mt-1">المبادرات المدرسية الرائدة</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="bg-slate-800/90 p-6 rounded-2xl border border-slate-700">
+                    <div class="flex items-center gap-2 mb-2">
+                        <span class="text-emerald-400 text-lg">🌱</span>
+                        <h4 class="text-lg font-bold text-white">مبادرة "لمدرستي أنتمي"</h4>
+                    </div>
+                    <p class="text-slate-300 text-xs leading-relaxed">تعزيز قيم الانتماء والولاء للمؤسسة التعليمية، وتفعيل المشاركة الطلابية الفعالة في العناية بمرافق المدرسة والحفاظ على بيئتها النموذجية.</p>
+                </div>
+                <div class="bg-slate-800/90 p-6 rounded-2xl border border-slate-700">
+                    <div class="flex items-center gap-2 mb-2">
+                        <span class="text-emerald-400 text-lg">🌳</span>
+                        <h4 class="text-lg font-bold text-white">مبادرة "بيئتي الأجمل"</h4>
+                    </div>
+                    <p class="text-slate-300 text-xs leading-relaxed">أنشطة مستمرة لتحسين البيئة المدرسية، التشجير، تنظيم الحدائق، ونشر الوعي البيئي والصحي بين صفوف الطلاب الـ 630.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- قسم الخطة التطويرية والاجرائية -->
         <section id="plan" class="bg-slate-800/40 border border-slate-700/50 rounded-3xl p-8 backdrop-blur-sm">
             <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-6 border-b border-slate-700/60 pb-4">
                 <div>
                     <span class="text-amber-400 text-xs font-semibold">الرؤية المؤسسية</span>
-                    <h2 class="text-2xl font-black text-white mt-1">الخطة التطويرية والأهداف الإجرائية</h2>
+                    <h2 class="text-2xl font-black text-white mt-1">الخطة التطويرية والإجرائية</h2>
                 </div>
-                <span class="text-slate-400 text-xs mt-2 md:mt-0">العام الدراسي 2026 - نحو تميز تربوي مستدام</span>
+                <span class="text-slate-400 text-xs mt-2 md:mt-0">تصميم متجاوب (Responsive) يعمل بكفاءة عالية على الهواتف والأجهزة الذكية</span>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm text-slate-300">
                 <div class="bg-slate-800/90 p-5 rounded-2xl border border-slate-700">
-                    <h4 class="font-bold text-white text-base mb-2">🎯 التحسين الأكاديمي</h4>
-                    <p class="text-xs leading-relaxed">رفع مستوى التحصيل للطلبة عبر برامج علاجية وإثرائية ومتابعة دورية لحالات الغياب والتأخر الدراسي.</p>
+                    <h4 class="font-bold text-white text-base mb-2">📈 التحسين الأكاديمي</h4>
+                    <p class="text-xs leading-relaxed">تطوير خطط علاجية وإثرائية لرفع مستوى التحصيل العلمي للطلاب، ومتابعة الانضباط المدرسي اليومي.</p>
                 </div>
                 <div class="bg-slate-800/90 p-5 rounded-2xl border border-slate-700">
-                    <h4 class="font-bold text-white text-base mb-2">🏆 الجوائز والمبادرات</h4>
-                    <p class="text-xs leading-relaxed">التحضير للمشاركة والتميز في الجوائز التربوية الكبرى مثل "جائزة الملكة رانيا العبدالله للتميز التربوي".</p>
+                    <h4 class="font-bold text-white text-base mb-2">🏆 الجوائز والتميز</h4>
+                    <p class="text-xs leading-relaxed">تهيئة البيئة المدرسية للمنافسة في الجوائز التربوية الكبرى مثل جائزة الملكة رانيا العبدالله للتميز التربوي.</p>
                 </div>
                 <div class="bg-slate-800/90 p-5 rounded-2xl border border-slate-700">
-                    <h4 class="font-bold text-white text-base mb-2">🤝 الشراكة المجتمعية</h4>
-                    <p class="text-xs leading-relaxed">تفعيل التواصل الفعال مع أولياء الأمور والمجتمع المحلي عبر منصات رقمية ذكية لضمان بيئة آمنة محفزة.</p>
+                    <h4 class="font-bold text-white text-base mb-2">📱 حوسبة العمليات</h4>
+                    <p class="text-xs leading-relaxed">توفير منصة ذكية تدعم الجوال بالكامل لتسهيل مهام الإدارة والمعلمين وتواصل أولياء الأمور بسهولة تامة.</p>
                 </div>
             </div>
         </section>
