@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>الموقع الرسمي - مدرسة الطيبة الثانوية الشاملة للبنين</title>
+    <title>مدرسة الطيبة الثانوية الشاملة للبنين</title>
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #0d1b2a;
+            background-color: #0b132b;
             color: #ffffff;
             margin: 0;
             padding: 0;
@@ -15,12 +15,12 @@
             text-align: right;
         }
         header {
-            background-color: #1b263b;
+            background-color: #1c2541;
             padding: 20px 40px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            border-bottom: 2px solid #415a77;
+            border-bottom: 2px solid #3a506b;
         }
         .logo-area h1 {
             margin: 0;
@@ -30,41 +30,69 @@
         .logo-area p {
             margin: 5px 0 0 0;
             font-size: 13px;
-            color: #94a3b8;
+            color: #8d99ae;
         }
         nav a {
-            color: #e2e8f0;
+            color: #edf2f4;
             text-decoration: none;
             margin-left: 20px;
             font-size: 14px;
             transition: color 0.2s;
         }
         nav a:hover {
-            color: #38bdf8;
+            color: #4cc9f0;
         }
         .main-container {
             max-width: 1200px;
             margin: 40px auto;
             padding: 0 20px;
         }
+        .hero-section {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        .hero-badge {
+            display: inline-block;
+            background-color: #1f4068;
+            color: #4cc9f0;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 13px;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+        .hero-section h2 {
+            font-size: 32px;
+            margin: 0 0 10px 0;
+            color: #ffffff;
+        }
+        .hero-section p {
+            color: #8d99ae;
+            font-size: 16px;
+            margin: 0;
+        }
         .portals-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 25px;
-            margin-bottom: 50px;
+            margin-bottom: 60px;
         }
         .portal-card {
-            background-color: #1b263b;
+            background-color: #1c2541;
             border-radius: 12px;
             padding: 30px;
             box-shadow: 0 10px 25px rgba(0,0,0,0.3);
-            border: 1px solid #415a77;
+            border: 1px solid #3a506b;
             text-align: center;
-            position: relative;
             transition: transform 0.3s ease;
         }
         .portal-card:hover {
             transform: translateY(-5px);
+        }
+        .portal-icon {
+            font-size: 36px;
+            margin-bottom: 15px;
+            display: block;
         }
         .portal-card h3 {
             font-size: 22px;
@@ -72,7 +100,7 @@
             color: #ffffff;
         }
         .portal-card p {
-            color: #94a3b8;
+            color: #8d99ae;
             font-size: 14px;
             line-height: 1.6;
             margin-bottom: 25px;
@@ -110,10 +138,12 @@
             background-color: #b45309;
         }
         .section-header {
-            margin-bottom: 20px;
+            margin-bottom: 25px;
+            border-bottom: 1px solid #3a506b;
+            padding-bottom: 10px;
         }
         .section-header span {
-            color: #38bdf8;
+            color: #4cc9f0;
             font-size: 13px;
             display: block;
             margin-bottom: 5px;
@@ -123,36 +153,48 @@
             margin: 0;
             color: #ffffff;
         }
-        .activities-grid {
+        .grid-2 {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(48%, 1fr));
             gap: 25px;
+            margin-bottom: 60px;
         }
-        .activity-card {
-            background-color: #1b263b;
+        .card-box {
+            background-color: #1c2541;
             border-radius: 12px;
             padding: 25px;
-            border: 1px solid #415a77;
+            border: 1px solid #3a506b;
+        }
+        .card-box h4 {
+            margin: 0 0 10px 0;
+            font-size: 18px;
+            color: #ffffff;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .card-box p {
+            color: #8d99ae;
+            font-size: 14px;
+            margin: 0;
+            line-height: 1.6;
         }
         .badge {
             display: inline-block;
             background-color: #334155;
-            color: #38bdf8;
+            color: #4cc9f0;
             padding: 4px 10px;
             border-radius: 4px;
             font-size: 12px;
             margin-bottom: 12px;
         }
-        .activity-card h4 {
-            margin: 0 0 10px 0;
-            font-size: 18px;
-            color: #ffffff;
-        }
-        .activity-card p {
-            color: #94a3b8;
-            font-size: 13px;
-            margin: 0;
-            line-height: 1.6;
+        footer {
+            background-color: #0b132b;
+            text-align: center;
+            padding: 30px;
+            border-top: 1px solid #3a506b;
+            color: #8d99ae;
+            font-size: 14px;
         }
     </style>
 </head>
@@ -172,16 +214,25 @@
     </header>
 
     <div class="main-container">
+        
+        <div class="hero-section">
+            <div class="hero-badge">الأنظمة الذكية</div>
+            <h2>البوابات الإلكترونية للخدمات المدرسية</h2>
+            <p>إدارة رصد الغياب والتواصل الفوري مع أولياء الأمور عبر الواتساب بدقة وسرعة</p>
+        </div>
+
         <div class="portals-grid">
-            <!-- بوابة المدير -->
+            <!-- لوحة تحكم المدير -->
             <div class="portal-card">
+                <span class="portal-icon">⚙️</span>
                 <h3>لوحة تحكم المدير</h3>
                 <p>متابعة غياب الصفوف إحصائياً، وإرسال تنبيهات الواتساب التلقائية لأولياء الأمور عند غياب الطالب.</p>
                 <a href="#" onclick="alert('قريباً - لوحة تحكم الإدارة'); return false;" class="btn btn-admin">لوحة المدير</a>
             </div>
 
-            <!-- بوابة الطلبة -->
+            <!-- بوابة الطلبة والأولياء -->
             <div class="portal-card">
+                <span class="portal-icon">👨‍👦</span>
                 <h3>بوابة الطلبة والأولياء</h3>
                 <p>للاستعلام عن عدد أيام الغياب، ومتابعة حالة الطالب السلوكية والتعليمية وتلقي تنبيهات الواتساب الفورية.</p>
                 <a href="#" onclick="alert('قريباً - بوابة أولياء الأمور'); return false;" class="btn btn-student">دخول الطلبة</a>
@@ -189,31 +240,81 @@
 
             <!-- بوابة المعلمين -->
             <div class="portal-card">
+                <span class="portal-icon">👨‍🏫</span>
                 <h3>بوابة المعلمين</h3>
-                <p>مخصصة لمربي الصفوف الـ 21 لرصد وحفظ الغياب اليومي، وتحديث حالات الحضور والتحضير للطلاب بسهولة.</p>
+                <p>مخصصة لمربيي الصفوف الـ 21 لرصد وحفظ الغياب اليومي، وتحديث حالات الحضور والتحضير للطلاب بسهولة.</p>
                 <a href="teacher.html" class="btn btn-teacher">دخول المعلمين</a>
             </div>
         </div>
 
         <div class="section-header">
-            <span>نبذة المدرسة</span>
+            <span>نبض المدرسة</span>
             <h2>بوابة الأنشطة والحياة المدرسية</h2>
         </div>
 
-        <div class="activities-grid">
-            <div class="activity-card">
-                <span class="badge">خدمات تقنية متطورة</span>
-                <h4>تنبيهات الواتساب والمساعد الذكي</h4>
-                <p>ربط المنصة بنظام إشعارات فورية عبر رسائل الواتساب لأولياء الأمور بحالات الغياب، مع مساعد ذكي للرد على استفسارات التسجيل والمواعيد.</p>
-            </div>
-
-            <div class="activity-card">
+        <div class="grid-2">
+            <div class="card-box">
                 <span class="badge">معرض الإبداع والابتكار</span>
                 <h4>مشاريع الطلاب المتميزة والابتكارات التقنية</h4>
                 <p>مساحة تفاعلية تسلط الضوء على إبداعات طلاب مدرسة الطيبة في المجالات العلمية، المهنية، والتقنية لدعم وتطوير مواهبهم.</p>
             </div>
+
+            <div class="card-box">
+                <span class="badge">خدمات تقنية متطورة</span>
+                <h4>تنبيهات الواتساب والمساعد الذكي</h4>
+                <p>ربط المنصة بنظام إشعارات فورية عبر رسائل الواتساب لأولياء الأمور بحالات الغياب، مع مساعد ذكي للرد على استفسارات التسجيل والمواعيد.</p>
+            </div>
         </div>
+
+        <div class="section-header">
+            <span>المسؤولية المجتمعية والبيئية</span>
+            <h2>المبادرات المدرسية الرائدة</h2>
+        </div>
+
+        <div class="grid-2">
+            <div class="card-box">
+                <h4>🌱 مبادرة "لمدرستي أنتمي"</h4>
+                <p>تعزيز قيم الانتماء والولاء للمؤسسة التعليمية، وتفعيل المشاركة الطلابية الفعالة في العناية بمرافق المدرسة والحفاظ على بيئتها النموذجية.</p>
+            </div>
+
+            <div class="card-box">
+                <h4>🌳 مبادرة "بيئتي الأجمل"</h4>
+                <p>أنشطة مستمرة لتحسين البيئة المدرسية، التشجير، تنظيم الحدائق، ونشر الوعي البيئي والصحي بين صفوف الطلاب الـ 630.</p>
+            </div>
+        </div>
+
+        <div class="section-header">
+            <span>الرؤية المؤسسية</span>
+            <h2>الخطة التطويرية والإجرائية</h2>
+        </div>
+
+        <div class="grid-2">
+            <div class="card-box">
+                <h4>📈 التحسين الأكاديمي</h4>
+                <p>تطوير خطط علاجية وإثرائية لرفع مستوى التحصيل العلمي للطلاب، ومتابعة الانضباط المدرسي اليومي.</p>
+            </div>
+
+            <div class="card-box">
+                <h4>🏆 الجوائز والتميز</h4>
+                <p>تهيئة البيئة المدرسية للمنافسة في الجوائز التربوية الكبرى مثل جائزة الملكة رانيا العبدالله للتميز التربوي.</p>
+            </div>
+
+            <div class="card-box">
+                <h4>📱 حوسبة العمليات</h4>
+                <p>توفير منصة ذكية تدعم الجوال بالكامل لتسهيل مهام الإدارة والمعلمين وتواصل أولياء الأمور بسهولة تامة.</p>
+            </div>
+
+            <div class="card-box">
+                <h4>📐 تصميم متجاوب (Responsive)</h4>
+                <p>يعمل بكفاءة عالية على الهواتف والأجهزة الذكية لضمان سرعة الوصول واستعراض البيانات في أي وقت.</p>
+            </div>
+        </div>
+
     </div>
+
+    <footer>
+        جميع الحقوق محفوظة © 2026 - مدرسة الطيبة الثانوية الشاملة للبنين
+    </footer>
 
 </body>
 </html>
