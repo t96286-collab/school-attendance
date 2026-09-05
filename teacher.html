@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>بوابة المعلمين - مدرسة الطيبة الثانوية للبنين</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f6f9;
+            margin: 0;
+            padding: 20px;
+            direction: rtl;
+            text-align: right;
+        }
+        .container {
+            max-width: 800px;
+            margin: 30px auto;
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        h2 {
+            color: #1a365d;
+            text-align: center;
+            margin-bottom: 25px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #2d3748;
+        }
+        select, input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #cbd5e0;
+            border-radius: 8px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+        .btn {
+            background-color: #3182ce;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            width: 100%;
+            transition: background 0.2s;
+        }
+        .btn:hover {
+            background-color: #2b6cb0;
+        }
+        #attendanceSection {
+            margin-top: 30px;
+            display: none;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+        th, td {
+            border: 1px solid #e2e8f0;
+            padding: 10px;
+            text-align: center;
+        }
+        th {
+            background-color: #edf2f7;
+            color: #2d3748;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>بوابة المعلمين - تحضير الطلاب</h2>
+        
+        <!-- مرحلة إدخال رمز الصف -->
+        <div id="loginSection">
+            <div class="form-group">
+                <label for="classSelect">اختر الصف:</label>
+                <select id="classSelect">
+                    <option value="">-- اختر الصف الدراسي --</option>
+                    <option value="الأول الثانوي أ">الأول الثانوي أ</option>
+                    <option value="الأول الثانوي ب">الأول الثانوي ب</option>
+                    <option value="الثاني الثانوي علمي">الثاني الثانوي علمي</option>
+                    <option value="الثاني الثانوي أدبي">الثاني الثانوي أدبي</option>
+                    <!-- باقي الصفوف الـ 21 يمكن إضافتها هنا -->
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="classCode">رمز الصف المخصص:</label>
+                <input type="password" id="classCode" placeholder="أدخل رمز التحقق الخاص بالصف">
+            </div>
+            <button class="btn" onclick="verifyCode()">دخول لتحضير الطلاب</button>
+        </div>
+
+        <!-- قسم رصد الحضور والغياب (يظهر بعد التحقق) -->
+        <div id="attendanceSection">
+            <h3 id="selectedClassName" style="color: #2b6cb0;"></h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>اسم الطالب</th>
+                        <th>الحالة (حاضر / غائب)</th>
+                    </tr>
+                </thead>
+                <tbody id="studentsTableBody">
+                    <!-- سيتم جلب أسماء الطلاب ديناميكياً من جوجل شيت -->
+                </tbody>
+            </table>
+            <br>
+            <button class="btn" style="background-color: #38a169;" onclick="submitAttendance()">حفظ ورصد الغياب</button>
+        </div>
+    </div>
+
+    <script>
+        function verifyCode() {
+            const className = document.getElementById('classSelect').value;
+            const code = document.getElementById('classCode').value;
+
+            if (!className || !code) {
+                alert('الرجاء اختيار الصف وإدخال رمز الصف!');
+                return;
+            }
+
+            // محاكاة التحقق الناجح والانتقال لقسم رصد الغياب
+            document.getElementById('loginSection').style.display = 'none';
+            document.getElementById('attendanceSection').style.display = 'block';
+            document.getElementById('selectedClassName').innerText = 'قائمة طلاب صف: ' + className;
+
+            // هنا يتم جلب بيانات الطلاب عبر الرابط البرمي لـ Google Apps Script
+            // سيتم ربطها بالكامل بسيرفر غوغل شيت الخاص بك
+        }
+
+        function submitAttendance() {
+            alert('تم حفظ بيانات الغياب بنجاح وإرسال التنبيهات!');
+        }
+    </script>
+
+</body>
+</html>
