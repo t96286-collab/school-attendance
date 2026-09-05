@@ -3,54 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>منصة مدرسة الطيبة الثانوية للبنين - نظام الغياب</title>
+    <title>منصة مدرسة الطيبة الثانوية الشاملة للبنين</title>
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            background: linear-gradient(135deg, #f0f4f8 0%, #d9e2ec 100%);
             margin: 0;
             padding: 20px;
             direction: rtl;
             text-align: right;
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            color: #2d3748;
         }
         .container {
-            max-width: 900px;
-            width: 100%;
+            max-width: 1000px;
+            margin: 20px auto;
             background: #ffffff;
             padding: 40px;
             border-radius: 16px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        header {
             text-align: center;
+            margin-bottom: 40px;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 20px;
         }
         h1 {
             color: #1a365d;
             margin-bottom: 10px;
-            font-size: 28px;
+            font-size: 32px;
         }
         p.subtitle {
             color: #4a5568;
-            margin-bottom: 40px;
-            font-size: 16px;
+            font-size: 18px;
+            margin: 0;
+        }
+        .section-title {
+            color: #2b6cb0;
+            font-size: 22px;
+            margin-top: 30px;
+            margin-bottom: 20px;
+            border-right: 4px solid #3182ce;
+            padding-right: 10px;
         }
         .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 20px;
-            margin-bottom: 30px;
+            margin-bottom: 40px;
         }
         .card {
             background: #f8fafc;
             border: 2px solid #e2e8f0;
-            padding: 30px 20px;
+            padding: 25px;
             border-radius: 12px;
             text-decoration: none;
             color: #2d3748;
             transition: all 0.3s ease;
             box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+            display: block;
         }
         .card:hover {
             transform: translateY(-5px);
@@ -68,30 +79,60 @@
             margin: 0;
             color: #718096;
             font-size: 14px;
+            line-height: 1.6;
+        }
+        .initiatives-list {
+            background: #f7fafc;
+            padding: 20px 30px;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+        }
+        .initiatives-list ul {
+            margin: 0;
+            padding-right: 20px;
+        }
+        .initiatives-list li {
+            margin-bottom: 10px;
+            font-size: 16px;
+            color: #4a5568;
+            font-weight: 500;
         }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <h1>مدرسة الطيبة الثانوية الشاملة للبنين</h1>
-        <p class="subtitle">نظام متابعة الغياب اليومي والإشعارات الآلية</p>
-        
+        <header>
+            <h1>مدرسة الطيبة الثانوية الشاملة للبنين</h1>
+            <p class="subtitle">بوابة الإدارة، متابعة الغياب اليومي، والخطط التطويرية</p>
+        </header>
+
+        <div class="section-title">بوابات النظام الأساسية</div>
         <div class="grid">
             <a href="teacher.html" class="card">
                 <h3>بوابة المعلمين</h3>
-                <p>تسجيل غياب الطلاب للصفوف الدراسية</p>
+                <p>تسجيل الغياب اليومي لصفوف المدرسة (21 صفاً و630 طالباً) بكل سهولة.</p>
             </a>
             
-            <a href="#" class="card" onclick="alert('قريباً - لوحة تحكم الإدارة'); return false;">
-                <h3>بوابة الإدارة</h3>
-                <p>متابعة الإحصائيات والتقارير الشاملة</p>
+            <a href="#" class="card" onclick="alert('قريباً - لوحة تحكم الإدارة ومتابعة الإحصائيات'); return false;">
+                <h3>بوابة الإدارة المدرسية</h3>
+                <p>متابعة تقارير الحضور والغياب والإحصائيات الشاملة للطلبة والمعلمين.</p>
             </a>
             
-            <a href="#" class="card" onclick="alert('قريباً - استعلام اولياء الأمور'); return false;">
+            <a href="#" class="card" onclick="alert('قريباً - استعلام أولياء الأمور'); return false;">
                 <h3>بوابة أولياء الأمور</h3>
-                <p>الاستعلام عن حالة غياب الطالب</p>
+                <p>الاستعلام المباشر عن حالة حضور وغياب الابن الطالب وإشعارات الواتساب.</p>
             </a>
+        </div>
+
+        <div class="section-title">الخطة التطويرية والمبادرات المدرسية</div>
+        <div class="initiatives-list">
+            <ul>
+                <li>مبادرة "لمدرستي أنتمي" لتعزيز الانتماء المدرسي والبيئي.</li>
+                <li>التحضير والمشاركة الفاعلة في "جائزة الملكة رانيا العبد الله للتميز التربوي".</li>
+                <li>تفعيل برنامج "بيئتي الأجمل" لتحسين المرافق والبيئة التعليمية المهنية والأكاديمية.</li>
+                <li>تطوير استخدام المشاغل المهنية والريادة التكنولوجية لخدمة طلاب المدرسة الذكور فقط.</li>
+            </ul>
         </div>
     </div>
 
