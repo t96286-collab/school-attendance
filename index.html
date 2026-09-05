@@ -1,29 +1,126 @@
-const WEB_APP_URL = "https://script.google.com/macros/s/AKfycbwwxK-Q4hcs44F9bRLYvhC4-Itfxg8E-47ibsOySBj_mGnYIZNBG0qdWsxnTr-QBdUXGw/exec";
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>منصة الحضور والغياب - مدرسة الطيبة الثانوية الشاملة للبنين</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f6f9;
+            margin: 0;
+            padding: 20px;
+            direction: rtl;
+            text-align: right;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        h2 {
+            color: #1a365d;
+            text-align: center;
+            margin-bottom: 25px;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 15px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #2d3748;
+        }
+        select, button {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #cbd5e0;
+            border-radius: 8px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+        select:focus {
+            border-color: #3182ce;
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.15);
+        }
+        button {
+            background-color: #3182ce;
+            color: white;
+            border: none;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.2s;
+            margin-top: 10px;
+        }
+        button:hover {
+            background-color: #2b6cb0;
+        }
+    </style>
+</head>
+<body>
 
-// دالة جلب بيانات الطلاب من Google Sheets
-async function fetchStudents() {
-  try {
-    let response = await fetch(WEB_APP_URL);
-    let data = await response.json();
-    console.log("تم جلب بيانات الطلاب بنجاح:", data);
-    // هنا يتم تعبئة القوائم والصفوف في واجهة الموقع بناءً على البيانات المستلمة
-  } catch (error) {
-    console.error("خطأ في الاتصال بقاعدة البيانات:", error);
-  }
-}
+    <div class="container">
+        <h2>نظام إدارة الحضور والغياب - مدرسة الطيبة الثانوية للبنين</h2>
+        
+        <div class="form-group">
+            <label for="classSelect">اختر الصف:</label>
+            <select id="classSelect">
+                <option value="">جاري تحميل الصفوف...</option>
+            </select>
+        </div>
 
-// دالة تسجيل غياب الطالب وإرسال البيانات للجدول
-async function submitAttendance(studentData) {
-  try {
-    let response = await fetch(WEB_APP_URL, {
-      method: "POST",
-      body: JSON.stringify(studentData)
-    });
-    let result = await response.json();
-    if(result.status === "success") {
-      alert("تم تسجيل الغياب بنجاح!");
-    }
-  } catch (error) {
-    console.error("خطأ في تسجيل الغياب:", error);
-  }
-}
+        <div class="form-group">
+            <label for="studentSelect">اختر الطالب:</label>
+            <select id="studentSelect" disabled>
+                <option value="">اختر الصف أولاً</option>
+            </select>
+        </div>
+
+        <button id="submitBtn" onclick="sendAttendance()">تسجيل الغياب</button>
+    </div>
+
+    <script>
+        const WEB_APP_URL = "https://script.google.com/macros/s/AKfycbwwxK-Q4hcs44F9bRLYvHC4-Itfxg8E-47ibsOySBj_mGnYIZNBG0dWsXnTr-QBdUXGw/exec";
+
+        window.onload = function() {
+            fetch(WEB_APP_URL)
+                .then(response => response.json())
+                .then(data => {
+                    console.log("تم جلب بيانات الطلاب بنجاح", data);
+                })
+                .catch(error => {
+                    console.error("خطأ في الاتصال بقاعدة البيانات", error);
+                });
+        };
+
+        function sendAttendance() {
+            const studentData = {
+                className: document.getElementById('classSelect').value,
+                studentName: document.getElementById('studentSelect').value
+            };
+
+            fetch(WEB_APP_URL, {
+                method: 'POST',
+                body: JSON.stringify(studentData)
+            })
+            .then(response => response.json())
+            .then(result => {
+                if (result.status === "success") {
+                    alert("تم تسجيل الغياب بنجاح!");
+                }
+            })
+            .catch(error => {
+                console.error("خطأ في تسجيل الغياب", error);
+                alert("حدث خطأ أثناء الاتصال بقاعدة البيانات");
+            });
+        }
+    </script>
+</body>
+</html>
