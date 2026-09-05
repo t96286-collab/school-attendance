@@ -25,41 +25,30 @@
             color: #1a365d;
             text-align: center;
             margin-bottom: 25px;
-            border-bottom: 2px solid #e2e8f0;
-            padding-bottom: 15px;
         }
-        .form-group {
+        .portal-box {
+            background: #1a365d;
+            color: white;
+            padding: 25px;
+            border-radius: 10px;
+            text-align: center;
             margin-bottom: 20px;
         }
-        label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: bold;
-            color: #2d3748;
+        .portal-box h3 {
+            margin-top: 0;
         }
-        select, button {
-            width: 100%;
-            padding: 12px;
-            border: 1px solid #cbd5e0;
-            border-radius: 8px;
-            font-size: 16px;
-            box-sizing: border-box;
-        }
-        select:focus {
-            border-color: #3182ce;
-            outline: none;
-            box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.15);
-        }
-        button {
+        .btn {
+            display: inline-block;
             background-color: #3182ce;
             color: white;
-            border: none;
+            padding: 12px 30px;
+            border-radius: 8px;
+            text-decoration: none;
             font-weight: bold;
-            cursor: pointer;
-            transition: background-color 0.2s;
-            margin-top: 10px;
+            margin-top: 15px;
+            transition: background 0.2s;
         }
-        button:hover {
+        .btn:hover {
             background-color: #2b6cb0;
         }
     </style>
@@ -67,60 +56,17 @@
 <body>
 
     <div class="container">
-        <h2>نظام إدارة الحضور والغياب - مدرسة الطيبة الثانوية للبنين</h2>
-        
-        <div class="form-group">
-            <label for="classSelect">اختر الصف:</label>
-            <select id="classSelect">
-                <option value="">جاري تحميل الصفوف...</option>
-            </select>
+        <h2>مدرسة الطيبة الثانوية الشاملة للبنين</h2>
+        <p style="text-align: center; color: #4a5568;">البوابة الإلكترونية لإدارة الحضور والغياب ورصد السجلات</p>
+
+        <!-- بوابة المعلمين -->
+        <div class="portal-box">
+            <h3>بوابة المعلمين</h3>
+            <p>مخصصة لمربي الصفوف للتحضير ورصد حالات الحضور والغياب اليومية.</p>
+            <a href="teacher.html" class="btn">دخول المعلمين</a>
         </div>
 
-        <div class="form-group">
-            <label for="studentSelect">اختر الطالب:</label>
-            <select id="studentSelect" disabled>
-                <option value="">اختر الصف أولاً</option>
-            </select>
-        </div>
-
-        <button id="submitBtn" onclick="sendAttendance()">تسجيل الغياب</button>
     </div>
 
-    <script>
-        const WEB_APP_URL = "https://script.google.com/macros/s/AKfycbwwxK-Q4hcs44F9bRLYvHC4-Itfxg8E-47ibsOySBj_mGnYIZNBG0dWsXnTr-QBdUXGw/exec";
-
-        window.onload = function() {
-            fetch(WEB_APP_URL)
-                .then(response => response.json())
-                .then(data => {
-                    console.log("تم جلب بيانات الطلاب بنجاح", data);
-                })
-                .catch(error => {
-                    console.error("خطأ في الاتصال بقاعدة البيانات", error);
-                });
-        };
-
-        function sendAttendance() {
-            const studentData = {
-                className: document.getElementById('classSelect').value,
-                studentName: document.getElementById('studentSelect').value
-            };
-
-            fetch(WEB_APP_URL, {
-                method: 'POST',
-                body: JSON.stringify(studentData)
-            })
-            .then(response => response.json())
-            .then(result => {
-                if (result.status === "success") {
-                    alert("تم تسجيل الغياب بنجاح!");
-                }
-            })
-            .catch(error => {
-                console.error("خطأ في تسجيل الغياب", error);
-                alert("حدث خطأ أثناء الاتصال بقاعدة البيانات");
-            });
-        }
-    </script>
 </body>
 </html>
