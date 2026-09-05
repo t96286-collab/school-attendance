@@ -34,7 +34,6 @@
             padding: 20px;
             border-radius: 12px;
             transition: 0.3s;
-            cursor: pointer;
         }
         .card-box:hover {
             background-color: rgba(59, 130, 246, 0.15);
@@ -50,6 +49,11 @@
             line-height: 1.6;
             font-size: 14px;
             margin-bottom: 0;
+        }
+        .card-link {
+            text-decoration: none;
+            color: inherit;
+            display: block;
         }
     </style>
 </head>
@@ -74,13 +78,13 @@
         <!-- القسم الثاني: المسؤولية المجتمعية والبيئية -->
         <h2>المبادرات المدرسية الرائدة</h2>
         <div class="grid">
-            <!-- بطاقة مبادرة "لمدرستي أنتمي" المحدثة برابط مباشر -->
-            <a href="https://drive.google.com/file/d/1BZ4DzEsi0W5Dh8asdUxsPg7V31yCfRpe/view?usp=sharing" target="_blank" style="text-decoration: none; display: block;">
-                <div class="card-box" style="border: 2px solid #3b82f6; background-color: rgba(59, 130, 246, 0.08);">
-                    <h4>🌱 مبادرة "لمدرستي أنتمي" (انقر هنا للتصفح)</h4>
+            <!-- بطاقة مبادرة "لمدرستي أنتمي" كرابط مباشر ومضمون -->
+            <div class="card-box" style="border: 2px solid #3b82f6; background-color: rgba(59, 130, 246, 0.08);">
+                <a href="https://drive.google.com/file/d/1BZ4DzEsi0W5Dh8asdUxsPg7V31yCfRpe/view?usp=sharing" target="_blank" class="card-link">
+                    <h4>🌱 مبادرة "لمدرستي أنتمي" <span style="font-size: 13px; color: #93c5fd; text-decoration: underline;">(انقر هنا للتصفح)</span></h4>
                     <p>تعزيز قيم الانتماء والولاء للمؤسسة التعليمية، وتفعيل المشاركة الطلابية الفعالة في العناية بمرافق المدرسة والحفاظ على بيئتها النموذجية.</p>
-                </div>
-            </a>
+                </a>
+            </div>
 
             <div class="card-box">
                 <h4>🌳 مبادرة "بيئتي الأجمل"</h4>
