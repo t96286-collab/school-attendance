@@ -3,72 +3,95 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>مدرسة الطيبة الثانوية الشاملة للبنين - بوابة الحضور والغياب</title>
+    <title>منصة مدرسة الطيبة الثانوية للبنين - نظام الغياب</title>
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #0f172a;
-            color: #ffffff;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
             margin: 0;
             padding: 20px;
             direction: rtl;
             text-align: right;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
         .container {
             max-width: 900px;
-            margin: 40px auto;
-            background: #1e293b;
+            width: 100%;
+            background: #ffffff;
             padding: 40px;
             border-radius: 16px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
             text-align: center;
         }
-        h2 {
-            color: #38bdf8;
+        h1 {
+            color: #1a365d;
             margin-bottom: 10px;
+            font-size: 28px;
         }
-        p {
-            color: #94a3b8;
+        p.subtitle {
+            color: #4a5568;
+            margin-bottom: 40px;
+            font-size: 16px;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
             margin-bottom: 30px;
         }
-        .portal-card {
-            background: #334155;
-            padding: 25px;
+        .card {
+            background: #f8fafc;
+            border: 2px solid #e2e8f0;
+            padding: 30px 20px;
             border-radius: 12px;
-            margin-bottom: 20px;
-            border: 1px solid #475569;
+            text-decoration: none;
+            color: #2d3748;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
         }
-        .portal-card h3 {
-            color: #f8fafc;
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: #3182ce;
+            background: #ebf8ff;
+            box-shadow: 0 10px 15px rgba(49, 130, 206, 0.1);
+        }
+        .card h3 {
             margin-top: 0;
+            color: #2b6cb0;
+            font-size: 20px;
+            margin-bottom: 10px;
         }
-        .btn-teacher {
-            background-color: #2563eb;
-            color: white;
-            padding: 12px 30px;
-            border: none;
-            border-radius: 8px;
-            font-size: 16px;
-            font-weight: bold;
-            cursor: pointer;
-            transition: background 0.2s;
-        }
-        .btn-teacher:hover {
-            background-color: #1d4ed8;
+        .card p {
+            margin: 0;
+            color: #718096;
+            font-size: 14px;
         }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <h2>مدرسة الطيبة الثانوية الشاملة للبنين</h2>
-        <p>البوابة الإلكترونية لإدارة الحضور والغياب ورصد السجلات اليومية بدقة وسرعة</p>
-
-        <!-- كارد بوابة المعلمين المباشر -->
-        <div class="portal-card">
-            <h3>بوابة المعلمين</h3>
-            <p>مخصصة لمربي الصفوف الـ 21 لرصد وحفظ الغياب اليومي وتحضير الطلاب بسهولة.</p>
-            <button onclick="window.location.href='teacher.html'" class="btn-teacher">دخول المعلمين</button>
+        <h1>مدرسة الطيبة الثانوية الشاملة للبنين</h1>
+        <p class="subtitle">نظام متابعة الغياب اليومي والإشعارات الآلية</p>
+        
+        <div class="grid">
+            <a href="teacher.html" class="card">
+                <h3>بوابة المعلمين</h3>
+                <p>تسجيل غياب الطلاب للصفوف الدراسية</p>
+            </a>
+            
+            <a href="#" class="card" onclick="alert('قريباً - لوحة تحكم الإدارة'); return false;">
+                <h3>بوابة الإدارة</h3>
+                <p>متابعة الإحصائيات والتقارير الشاملة</p>
+            </a>
+            
+            <a href="#" class="card" onclick="alert('قريباً - استعلام اولياء الأمور'); return false;">
+                <h3>بوابة أولياء الأمور</h3>
+                <p>الاستعلام عن حالة غياب الطالب</p>
+            </a>
         </div>
     </div>
 
