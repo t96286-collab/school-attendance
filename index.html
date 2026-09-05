@@ -3,53 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>منصة الحضور والغياب - مدرسة الطيبة الثانوية الشاملة للبنين</title>
+    <title>مدرسة الطيبة الثانوية الشاملة للبنين - بوابة الحضور والغياب</title>
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f4f6f9;
+            background-color: #0f172a;
+            color: #ffffff;
             margin: 0;
             padding: 20px;
             direction: rtl;
             text-align: right;
         }
         .container {
-            max-width: 800px;
-            margin: 0 auto;
-            background: #ffffff;
-            padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            max-width: 900px;
+            margin: 40px auto;
+            background: #1e293b;
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+            text-align: center;
         }
         h2 {
-            color: #1a365d;
-            text-align: center;
-            margin-bottom: 25px;
+            color: #38bdf8;
+            margin-bottom: 10px;
         }
-        .portal-box {
-            background: #1a365d;
-            color: white;
+        p {
+            color: #94a3b8;
+            margin-bottom: 30px;
+        }
+        .portal-card {
+            background: #334155;
             padding: 25px;
-            border-radius: 10px;
-            text-align: center;
+            border-radius: 12px;
             margin-bottom: 20px;
+            border: 1px solid #475569;
         }
-        .portal-box h3 {
+        .portal-card h3 {
+            color: #f8fafc;
             margin-top: 0;
         }
-        .btn {
-            display: inline-block;
-            background-color: #3182ce;
+        .btn-teacher {
+            background-color: #2563eb;
             color: white;
             padding: 12px 30px;
+            border: none;
             border-radius: 8px;
-            text-decoration: none;
+            font-size: 16px;
             font-weight: bold;
-            margin-top: 15px;
+            cursor: pointer;
             transition: background 0.2s;
         }
-        .btn:hover {
-            background-color: #2b6cb0;
+        .btn-teacher:hover {
+            background-color: #1d4ed8;
         }
     </style>
 </head>
@@ -57,15 +62,14 @@
 
     <div class="container">
         <h2>مدرسة الطيبة الثانوية الشاملة للبنين</h2>
-        <p style="text-align: center; color: #4a5568;">البوابة الإلكترونية لإدارة الحضور والغياب ورصد السجلات</p>
+        <p>البوابة الإلكترونية لإدارة الحضور والغياب ورصد السجلات اليومية بدقة وسرعة</p>
 
-        <!-- بوابة المعلمين -->
-        <div class="portal-box">
+        <!-- كارد بوابة المعلمين المباشر -->
+        <div class="portal-card">
             <h3>بوابة المعلمين</h3>
-            <p>مخصصة لمربي الصفوف للتحضير ورصد حالات الحضور والغياب اليومية.</p>
-            <a href="teacher.html" class="btn">دخول المعلمين</a>
+            <p>مخصصة لمربي الصفوف الـ 21 لرصد وحفظ الغياب اليومي وتحضير الطلاب بسهولة.</p>
+            <button onclick="window.location.href='teacher.html'" class="btn-teacher">دخول المعلمين</button>
         </div>
-
     </div>
 
 </body>
