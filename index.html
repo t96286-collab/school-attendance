@@ -1,41 +1,68 @@
-<!-- بطاقة مبادرة "لمدرستي أنتمي" -->
-<div class="card-box" style="border: 2px solid #3b82f6; background-color: rgba(59, 130, 246, 0.05); padding: 20px; border-radius: 12px; margin-bottom: 20px;">
-    <h4>🌱 مبادرة "لمدرستي أنتمي"</h4>
-    <p>تعزيز قيم الانتماء والولاء للمؤسسة التعليمية، وتفعيل المشاركة الطلابية الفعالة في العناية بمرافق المدرسة والحفاظ على بيئتها النموذجية.</p>
-    <div style="margin-top: 15px;">
-        <button type="button" onclick="openInitiativeModalDirect()" style="background-color: #2563eb; color: #ffffff; padding: 10px 20px; border-radius: 8px; font-weight: bold; font-size: 14px; border: none; cursor: pointer; box-shadow: 0 4px 12px rgba(37,99,235,0.3);">
-            🔗 انقر هنا لتصفح وثيقة المبادرة
-        </button>
-    </div>
-</div>
-
-<!-- النافذة المنبثقة المستقلة -->
-<div id="initiativeModalBox" style="display: none; position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background-color: rgba(11, 19, 43, 0.95); z-index: 999999; justify-content: center; align-items: center; padding: 15px; box-sizing: border-box;">
-    <div style="background-color: #1c2541; border: 1px solid #3a506b; border-radius: 12px; width: 100%; max-width: 950px; height: 90vh; display: flex; flex-direction: column; overflow: hidden; box-shadow: 0 25px 50px rgba(0,0,0,0.8);">
-        <div style="background-color: #0b132b; padding: 15px 20px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #3a506b;">
-            <h3 style="margin: 0; color: #ffffff; font-size: 16px;">وثيقة مبادرة "لمدرستي أنتمي"</h3>
-            <button type="button" onclick="closeInitiativeModalDirect()" style="background-color: #ef4444; color: white; border: none; padding: 8px 16px; border-radius: 6px; cursor: pointer; font-weight: bold; font-size: 14px;">رجوع للصفحة الرئيسية ✕</button>
-        </div>
-        <div style="flex: 1; padding: 0; position: relative; background: #ffffff;">
-            <iframe src="https://drive.google.com/file/d/1BZ4DzEsi0W5Dh8asdUxsPg7V31yCfRpe/preview" style="width: 100%; height: 100%; border: none;" allow="autoplay"></iframe>
-        </div>
-    </div>
-</div>
-
-<script>
-    // دالة فتح عامة ومباشرة ترتبط بالزر فورا دون شروط
-    function openInitiativeModalDirect() {
-        var modal = document.getElementById('initiativeModalBox');
-        if (modal) {
-            modal.style.display = 'flex';
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مدرسة الطيبة الثانوية الشاملة للبنين</title>
+    <style>
+        body {
+            font-family: Tahoma, Arial, sans-serif;
+            background-color: #0b132b;
+            color: #ffffff;
+            margin: 0;
+            padding: 20px;
         }
-    }
-
-    // دالة إغلاق عامة ومباشرة
-    function closeInitiativeModalDirect() {
-        var modal = document.getElementById('initiativeModalBox');
-        if (modal) {
-            modal.style.display = 'none';
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
         }
-    }
-</script>
+        .card-box {
+            border: 2px solid #3b82f6;
+            background-color: rgba(59, 130, 246, 0.05);
+            padding: 20px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+        }
+        .card-box h4 {
+            margin-top: 0;
+            color: #60a5fa;
+            font-size: 20px;
+        }
+        .card-box p {
+            color: #d1d5db;
+            line-height: 1.6;
+        }
+        .initiative-btn {
+            display: inline-block;
+            background-color: #2563eb;
+            color: #ffffff;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 15px;
+            text-decoration: none;
+            box-shadow: 0 4px 12px rgba(37,99,235,0.3);
+            transition: background-color 0.3s;
+        }
+        .initiative-btn:hover {
+            background-color: #1d4ed8;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- بطاقة مبادرة "لمدرستي أنتمي" كرابط تشعبي مباشر ومضمون -->
+        <div class="card-box">
+            <h4>🌱 مبادرة "لمدرستي أنتمي"</h4>
+            <p>تعزيز قيم الانتماء والولاء للمؤسسة التعليمية، وتفعيل المشاركة الطلابية الفعالة في العناية بمرافق المدرسة والحفاظ على بيئتها النموذجية.</p>
+            <div style="margin-top: 15px;">
+                <a href="https://drive.google.com/file/d/1BZ4DzEsi0W5Dh8asdUxsPg7V31yCfRpe/view?usp=sharing" target="_blank" class="initiative-btn">
+                    🔗 انقر هنا للانتقال إلى صفحة المبادرة مباشرة
+                </a>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
