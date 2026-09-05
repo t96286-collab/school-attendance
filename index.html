@@ -3,18 +3,18 @@
     <h4>🌱 مبادرة "لمدرستي أنتمي"</h4>
     <p>تعزيز قيم الانتماء والولاء للمؤسسة التعليمية، وتفعيل المشاركة الطلابية الفعالة في العناية بمرافق المدرسة والحفاظ على بيئتها النموذجية.</p>
     <div style="margin-top: 15px;">
-        <button id="openInitiativeBtn" type="button" style="background-color: #2563eb; color: #ffffff; padding: 10px 20px; border-radius: 8px; font-weight: bold; font-size: 14px; border: none; cursor: pointer; box-shadow: 0 4px 12px rgba(37,99,235,0.3);">
+        <button type="button" onclick="openInitiativeModalDirect()" style="background-color: #2563eb; color: #ffffff; padding: 10px 20px; border-radius: 8px; font-weight: bold; font-size: 14px; border: none; cursor: pointer; box-shadow: 0 4px 12px rgba(37,99,235,0.3);">
             🔗 انقر هنا لتصفح وثيقة المبادرة
         </button>
     </div>
 </div>
 
 <!-- النافذة المنبثقة المستقلة -->
-<div id="initiativeModalBox" style="display: none; position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background-color: rgba(11, 19, 43, 0.95); z-index: 99999; justify-content: center; align-items: center; padding: 15px; box-sizing: border-box;">
+<div id="initiativeModalBox" style="display: none; position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background-color: rgba(11, 19, 43, 0.95); z-index: 999999; justify-content: center; align-items: center; padding: 15px; box-sizing: border-box;">
     <div style="background-color: #1c2541; border: 1px solid #3a506b; border-radius: 12px; width: 100%; max-width: 950px; height: 90vh; display: flex; flex-direction: column; overflow: hidden; box-shadow: 0 25px 50px rgba(0,0,0,0.8);">
         <div style="background-color: #0b132b; padding: 15px 20px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #3a506b;">
             <h3 style="margin: 0; color: #ffffff; font-size: 16px;">وثيقة مبادرة "لمدرستي أنتمي"</h3>
-            <button id="closeInitiativeBtn" type="button" style="background-color: #ef4444; color: white; border: none; padding: 8px 16px; border-radius: 6px; cursor: pointer; font-weight: bold; font-size: 14px;">رجوع للصفحة الرئيسية ✕</button>
+            <button type="button" onclick="closeInitiativeModalDirect()" style="background-color: #ef4444; color: white; border: none; padding: 8px 16px; border-radius: 6px; cursor: pointer; font-weight: bold; font-size: 14px;">رجوع للصفحة الرئيسية ✕</button>
         </div>
         <div style="flex: 1; padding: 0; position: relative; background: #ffffff;">
             <iframe src="https://drive.google.com/file/d/1BZ4DzEsi0W5Dh8asdUxsPg7V31yCfRpe/preview" style="width: 100%; height: 100%; border: none;" allow="autoplay"></iframe>
@@ -23,24 +23,19 @@
 </div>
 
 <script>
-    // ربط الأحداث برمجياً لضمان الاستجابة المطلقة وعدم ضياع النقرات
-    document.addEventListener('DOMContentLoaded', function() {
-        const openBtn = document.getElementById('openInitiativeBtn');
-        const closeBtn = document.getElementById('closeInitiativeBtn');
-        const modal = document.getElementById('initiativeModalBox');
-
-        if (openBtn && modal) {
-            openBtn.addEventListener('click', function(e) {
-                e.preventDefault();
-                modal.style.setProperty('display', 'flex', 'important');
-            });
+    // دالة فتح عامة ومباشرة ترتبط بالزر فورا دون شروط
+    function openInitiativeModalDirect() {
+        var modal = document.getElementById('initiativeModalBox');
+        if (modal) {
+            modal.style.display = 'flex';
         }
+    }
 
-        if (closeBtn && modal) {
-            closeBtn.addEventListener('click', function(e) {
-                e.preventDefault();
-                modal.style.setProperty('display', 'none', 'important');
-            });
+    // دالة إغلاق عامة ومباشرة
+    function closeInitiativeModalDirect() {
+        var modal = document.getElementById('initiativeModalBox');
+        if (modal) {
+            modal.style.display = 'none';
         }
-    });
+    }
 </script>
